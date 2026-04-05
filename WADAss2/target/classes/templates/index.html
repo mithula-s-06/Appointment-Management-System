@@ -1,0 +1,17 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="/css/styles.css">
+<div class="container">
+<h2>Appointment Booking</h2>
+
+<form th:action="@{/search}" method="get">
+
+<input type="text" name="name" placeholder="Search by Client" required>
+
+<button type="submit">Search</button>
+
+</form>
+
+<a href="/add"><button>Add</button></a>
+<a href="/view"><button>View</button></a>
+</div>
+</html>

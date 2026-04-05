@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Appointments</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<h2 style="text-align:center; color:white;">Appointments</h2>
+
+<div class="table-container">
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Service</th>
+<th>Date</th>
+<th>Time</th>
+<th>Action</th>
+</tr>
+
+<tr th:each="a : ${list}">
+<td th:text="${a.appointmentid}"></td>
+<td th:text="${a.clientname}"></td>
+<td th:text="${a.service}"></td>
+<td th:text="${a.date}"></td>
+<td th:text="${a.time}"></td>
+<td>
+<a th:href="@{/edit/{id}(id=${a.appointmentid})}">Edit</a>
+<a th:href="@{/delete/{id}(id=${a.appointmentid})}">Delete</a>
+</td>
+</tr>
+
+</table>
+
+</div>
+
+</body>
+</html>

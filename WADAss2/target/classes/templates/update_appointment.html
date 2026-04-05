@@ -1,0 +1,14 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="/css/styles.css">
+
+<div class="container">
+<form th:action="@{/save}" method="post">
+<input name="appointmentid" th:value="${appointment.appointmentid}">
+<input name="clientname" th:value="${appointment.clientname}">
+<input name="service" th:value="${appointment.service}">
+<input type="date" name="date" th:value="${appointment.date}">
+<input type="time" name="time" th:value="${appointment.time}">
+<button>Update</button>
+</form>
+</div>
+</html>
